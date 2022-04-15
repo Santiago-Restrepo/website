@@ -17,9 +17,9 @@ export default function Home() {
       </Head>
 
       <Layout>
+          <SocialMedia/>
           <Numbers/>
           <Hero/>
-          <SocialMedia/>
           <AboutMe/>
           <Portfolio/>
       

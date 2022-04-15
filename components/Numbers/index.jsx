@@ -1,6 +1,41 @@
 import React from 'react';
 import styles from './styles';
+import { useLayoutEffect, useEffect } from 'react';
 const Numbers = () => {
+    const isHopefullyDomEnvironment =
+    typeof window !== 'undefined' &&
+    typeof window.document !== 'undefined' &&
+    typeof window.document.createElement !== 'undefined'
+
+    const useIsomorphicLayoutEffect = isHopefullyDomEnvironment
+    ? useLayoutEffect
+    : useEffect
+    useIsomorphicLayoutEffect(() => {
+            let atScroll = false;
+            let parallaxText = document.querySelectorAll(".numbers p");
+
+            const scrollProgress = () => {
+                atScroll = true;
+            };
+
+            const raf = () => {
+                if (atScroll) {
+                    parallaxText.forEach((element, index) => {
+                        if (index === 1) {
+                            element.style.transform = "translateY(" + window.scrollY / 500 + "%)";
+                        }else{
+                            element.style.transform = `translateY(-${(window.scrollY / 500) + 10}%) scale(.7)`;
+                        }
+                    });
+                    atScroll = false;
+                }
+                requestAnimationFrame(raf);
+            };
+
+            requestAnimationFrame(raf);
+            window.addEventListener("scroll", scrollProgress);
+    }, [])
+    
     return ( 
         <div className="numbers">
             <p>101010010101001010100101010010101001010100101010010101001010100101010010101001</p>

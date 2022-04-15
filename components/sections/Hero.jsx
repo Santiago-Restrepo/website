@@ -1,5 +1,5 @@
 import React from 'react';
-import ConsoleText from '../consoleText';
+import ConsoleText from '../ConsoleText';
 import Window from '../Window';
 
 const Hero = () => {

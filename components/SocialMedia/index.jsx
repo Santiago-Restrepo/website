@@ -3,37 +3,58 @@ import {FaWhatsapp, FaFacebookF} from 'react-icons/fa'
 import {BsTwitter} from 'react-icons/bs'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import styles from './styles';
-import {useState, useLayoutEffect} from 'react';
+import {useState, useLayoutEffect, useEffect} from 'react';
 import gsap from 'gsap';
 import { colors } from '../../styles/theme';
 
+
 const SocialMedia = () => {
     const [socialShowed, setSocialShowed] = useState(false)
-    const [animation, setAnimation] = useState(null)
-    useLayoutEffect(()=>{
-        var tween = gsap.to(".socialMedia__container", {
+    const [animations, setAnimations] = useState(null)
+    
+    const isHopefullyDomEnvironment =
+    typeof window !== 'undefined' &&
+    typeof window.document !== 'undefined' &&
+    typeof window.document.createElement !== 'undefined'
+
+    const useIsomorphicLayoutEffect = isHopefullyDomEnvironment
+    ? useLayoutEffect
+    : useEffect
+    
+    useIsomorphicLayoutEffect(()=>{
+        let fadeInLeft = gsap.to(".socialMedia__container", {
             duration: .5, 
             x: 0, 
             paused: true,
             background: `linear-gradient(${colors.primary}, ${colors.secondary})`
         });
+        let rotate360 = gsap.to(".showButton", {
+            duration: .5, 
+            rotateY: 360,
+            paused: true,
+        });
         gsap.to(".socialMedia__container", {
             duration: 0, 
             x: 100, 
         });
-        setAnimation(tween)
+        setAnimations({
+            socialIcons: fadeInLeft,
+            showButton: rotate360
+        })
     },[])
     return ( 
         <section id="contact" className={`socialMedia ${socialShowed && 'show'}`}>
             <button 
-                className={`showButton`}
+                className={`showButton ${socialShowed && 'closeButton'}`}
                 onClick={()=> {
                     if (!socialShowed) {
-                        animation.play()
-                        setSocialShowed(true    )
+                        animations.socialIcons.play()
+                        animations.showButton.play()
+                        setSocialShowed(true)
                     } else {
                         setSocialShowed(false)
-                        animation.reverse()
+                        animations.socialIcons.reverse()
+                        animations.showButton.reverse()
                         
                     }
                 }}

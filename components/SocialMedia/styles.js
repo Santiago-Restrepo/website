@@ -3,6 +3,7 @@ import { colors } from '../../styles/theme'
 
 export default css`
     .socialMedia{
+        z-index: 1;
         position: fixed;
         top: 1.5rem;
         right: 1rem;
@@ -17,6 +18,7 @@ export default css`
     .socialMedia__container{
         display: flex;
         flex-direction: column;
+        border-radius: .3rem;
     }
     .socialMedia a, .showButton{
         color: white;
@@ -38,6 +40,9 @@ export default css`
         background: none;
         border: 1px solid transparent;
         cursor: pointer;
+    }
+    .closeButton{
+        /* color: red; */
     }
     
     .socialMedia a.show{

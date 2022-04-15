@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ConsoleText  from './consoleText';
+import ConsoleText  from './ConsoleText';
 import KnowMoreButton from './buttons/KnowMoreButton'
 
 const projects = [

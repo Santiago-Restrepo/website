@@ -4,6 +4,7 @@ const Window = ({children}) => {
     return ( 
         <div className='window'>
             <div className="window__tab">
+                <span>Santi@restrepo: ~</span>
                 <div className="window__tab-buttons">
                     <div className="tabButton"></div>
                     <div className="tabButton"></div>
