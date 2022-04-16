@@ -3,7 +3,7 @@ import { colors } from '../../../styles/theme'
 
 export default css`
     .hero{
-        margin-top: 5rem;
-        height: 68vh;
+        margin-top: 7rem;
+        height: 65vh;
     }
 `

@@ -3,10 +3,20 @@ import { colors } from '../../../styles/theme'
 
 export default css`
     .aboutMe{
-        margin: 0 1.5rem;
+        margin: 0 1.5rem 5rem;
+        padding-top: 1.5rem;
         margin-top: 3rem;
-        background-color: #19191a79;
-        -webkit-backdrop-filter: saturate(180%) blur(2px);
-        backdrop-filter: saturate(180%) blur(2px);
+    }
+    .aboutMe__container{
+        max-width: 45rem;
+        margin: 0 auto;
+        
+    }
+
+    @media screen and (min-width: 768px){
+        .aboutMe__container{
+            display: flex;
+            align-items: center;
+        }
     }
 `

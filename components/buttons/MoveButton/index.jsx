@@ -3,10 +3,10 @@ import React from 'react';
 import Arrow from '../../Arrow';
 import styles from './styles';
 
-const MoveButton = ({direction,content, link}) => {
+const MoveButton = ({direction, content, link}) => {
     return (
         <Link href={link}>
-            <a className='moveButton'>
+            <a className={`moveButton ${direction}`}>
                 {
                     direction === "up" ?
                     <>

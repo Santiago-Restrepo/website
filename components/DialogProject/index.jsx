@@ -8,7 +8,7 @@ import styles from './styles';
 const projects = [
     {
         name: "Greazy",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!",
         link: "https://127.0.0.1:8080",
         image: greazyImage
     },
@@ -37,7 +37,6 @@ const DialogProject = () => {
     : useEffect
     useIsomorphicLayoutEffect(()=>{
         const projectImages = document.querySelectorAll('.currentProject__image');
-
         projectImages[0].style.backgroundImage = `url(${currentProject.image.src})`;
         projectImages[1].style.backgroundImage = `url(${currentProject.image.src})`;
     },[])
@@ -53,11 +52,13 @@ const DialogProject = () => {
                     <div className="currentProject__image"></div>
                 </Window>
             </div>
-            <h2 className='currentProject__title'>{currentProject.name}</h2>
-            <p className='currentProject__description'>{currentProject.description}</p>
-            <div className="currentProject__buttons">
-                <button className='seeMoreButton'>Ver proyecto</button>
-                <KnowMoreButton direction="right" content="Siguiente proyecto"/>
+            <div className="currentProject__content">
+                <h2 className='currentProject__title'>{currentProject.name}</h2>
+                <p className='currentProject__description'>{currentProject.description}</p>
+                <div className="currentProject__buttons">
+                    <button className='seeMoreButton'>Ver proyecto</button>
+                    <KnowMoreButton direction="right" content="Siguiente proyecto" classes="floating"/>
+                </div>
             </div>
             <style jsx>{styles}</style>
         </div>

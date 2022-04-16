@@ -3,7 +3,7 @@ import { colors } from '../../styles/theme'
 
 export default css`
     .numbers{
-        position:fixed;
+        position: fixed;
         top: -10%;
         bottom: 0;
         overflow-y: hidden;
@@ -29,5 +29,13 @@ export default css`
         background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 500;
+    }
+    @media screen and (min-width: 1024px){
+        .numbers{
+            top: -30%;
+        }
+        .numbers p:nth-child(1), .numbers p:nth-child(3){
+            /* transform: scale(.7) translateY(-80%); */
+        }
     }
 `

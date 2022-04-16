@@ -16,4 +16,7 @@ export default css`
         border-radius: .5rem;
         color: ${colors.white};
     }
+    .moveButton.up{
+        margin: 1.5rem auto;
+    }
 `

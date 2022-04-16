@@ -11,7 +11,7 @@ const Hero = () => {
                 <Window tabText="Santi@restrepo: ~">
                     <ConsoleText text="¡Hola!"/>
                     <ConsoleText text="Soy Santiago Restrepo Idárraga"/>
-                    <ConsoleText text="Un desarrollador web pasionado por la seguridad informática"/>
+                    <ConsoleText text="Un desarrollador web apasionado por la seguridad informática"/>
                     <ConsoleText text=""/>
                 </Window>
             </section>

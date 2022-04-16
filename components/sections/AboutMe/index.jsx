@@ -7,8 +7,13 @@ import styles from './styles';
 const AboutMe = () => {
     return ( 
         <section className='aboutMe' id='aboutMe'>
-            <Image src={mePhoto}/>
-            <DialogText/>
+            <div className="aboutMe__container">
+                <Image src={mePhoto} style={{
+                    borderRadius: "1rem",
+                    zIndex: 1,
+                }}/>
+                <DialogText/>
+            </div>
             <style jsx>{styles}</style>
         </section>
     )

@@ -6,11 +6,19 @@ export default css`
         display: flex;
         flex-direction: column;
         margin: 1rem 1.5rem 1rem;
+        padding: 0 1.5rem;
+        max-width: 45rem;
+        margin: 0 auto;
         color: ${colors.white};
+        border-radius: .5rem;
     }
 
     .window.desktopSize, .window.mobileSize{
         position: absolute;
+        background-size: cover;
+        padding: 0;
+
+        /* border: 2px inset ${colors.gray}33; */
         
     }
     .window.desktopSize .window__tab, .window.mobileSize .window__tab{
@@ -20,12 +28,12 @@ export default css`
         top: 10%;
         left: 0;
         width: 90%;
-        max-width: 25rem;
-        height: 70%;
+        max-width: 26rem;
+        height: 80%;
         max-height: 15rem;
         transform: perspective(600px) rotateY(25deg) rotateX(12deg);
-        box-shadow: -5px 5px 10px ${colors.black};
-        border-radius: 0 0 .5rem .5rem;
+        box-shadow: -5px 5px 5px ${colors.black};
+        /* border-radius: 0 0 .5rem .5rem; */
     }
     .window.desktopSize .window__tab-buttons{
         left: .5rem;
@@ -34,13 +42,13 @@ export default css`
     
     .window.mobileSize{
         right: 0;
-        max-width: 12rem;
+        max-width: 10rem;
         max-height: 25rem;
         width: 40%;
-        height: 90%;
-        transform: perspective(400px) rotateY(-25deg) rotateX(5deg);
-        box-shadow: 5px 5px 10px ${colors.black};
-        border-radius: 0 0 .5rem .5rem;
+        height: 85%;
+        transform: perspective(300px) rotateY(-25deg) rotateX(0deg);
+        box-shadow: 5px 5px 5px ${colors.black};
+        /* border-radius: 0 0 .5rem .5rem; */
     }
     .window.mobileSize .window__tab-buttons .tabButton, .window.desktopSize .window__tab-buttons .tabButton{
         width: .5rem;
@@ -91,9 +99,19 @@ export default css`
     .window__content{
         height: 100%;
         border-radius: 0 0 .5rem .5rem;
-        background-color: #19191a79;
+        background-color: #35353579;
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px); 
         font-size: 1.2rem;
+    }
+
+    @media screen and (min-width: 1024px){
+        .window.mobileSize{
+            transform: perspective(300px) rotateY(-15deg) rotateX(0deg);
+        }
+        .window.desktopSize{
+            transform: perspective(300px) rotateY(10deg) rotateX(0deg);
+            max-height: 25rem;
+        }
     }
 `

@@ -17,6 +17,12 @@ export default css`
         color: ${colors.white};
         background: linear-gradient(to right, ${colors.primary}, ${colors.secondary});
     }
+    .knowMoreButton.floating{
+        position: absolute;
+        bottom: -1rem;
+        right: -.5rem;
+
+    }
     .knowMoreButton .knowMoreButton__content{
         margin-right: .5rem;
     }

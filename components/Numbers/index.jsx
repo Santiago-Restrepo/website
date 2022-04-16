@@ -11,30 +11,33 @@ const Numbers = () => {
     ? useLayoutEffect
     : useEffect
     useIsomorphicLayoutEffect(() => {
-            // var atScroll = false;
-            // let parallaxText = document.querySelectorAll(".numbers p");
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+        /* La pantalla tiene al menos 400 píxeles de ancho */
+            var atScroll = false;
+            let parallaxText = document.querySelectorAll(".numbers p");
 
-            // const scrollProgress = () => {
-            //     atScroll = true;
-            // };
+            const scrollProgress = () => {
+                atScroll = true;
+            };
 
-            // const raf = () => {
-            //     if (atScroll) {
-            //         parallaxText.forEach((element, index) => {
-            //             if (index === 1) {
-            //                 element.style.transform = "translateY(" + window.scrollY / 500 + "%)";
-            //             }else{
-            //                 element.style.transform = `translateY(-${(window.scrollY / 500) + 10}%) scale(.7)`;
-            //             }
-            //         });
-            //         atScroll = false;
-            //     }
+            const raf = () => {
+                if (atScroll) {
+                    parallaxText.forEach((element, index) => {
+                        if (index === 1) {
+                            element.style.transform = "translateY(" + window.scrollY / 500 + "%)";
+                        }else{
+                            element.style.transform = `translateY(-${(window.scrollY / 500) + 30}%) scale(.7)`;
+                        }
+                    });
+                    atScroll = false;
+                }
                 
-            //     requestAnimationFrame(raf);
-            // };
+                requestAnimationFrame(raf);
+            };
 
-            // requestAnimationFrame(raf);
-            // window.addEventListener("scroll", scrollProgress);
+            requestAnimationFrame(raf);
+            window.addEventListener("scroll", scrollProgress);
+        }
     }, [])
     
     return ( 

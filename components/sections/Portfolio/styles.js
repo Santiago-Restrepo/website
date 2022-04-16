@@ -18,18 +18,25 @@ export default css`
     
     .portfolio__title h2{
         position: absolute;
-        left: -30%;
         line-height: 1rem;
         color: ${colors.white};
         font-weight: 400;
         white-space: nowrap;
     }
     .portfolio__title h2:nth-child(1){
+        right: -30%;
         top:0;
         color: ${colors.primary};
     }
     .portfolio__title h2:nth-child(2){
+        left: -30%;
         bottom:0;
     }
+
+    .portfolio .moveButton{
+        margin: 0 auto;
+    }
+
+    
     
 `

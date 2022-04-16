@@ -19,7 +19,13 @@ export const globalStyles = css.global`
         /* padding: 1.5rem; */
     }
     button{
-        width: 100%;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px){
+        html{
+            font-size: 1.3rem;
+        }
     }
 
 `
