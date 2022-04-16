@@ -4,7 +4,7 @@ import { colors } from '../../styles/theme'
 export default css`
     .numbers{
         position:fixed;
-        top: -50%;
+        top: -10%;
         bottom: 0;
         overflow-y: hidden;
         right: 2rem;
@@ -15,10 +15,9 @@ export default css`
     }
     .numbers p{
         width: 1ch;
-        font-size: 1.5rem;
+        font-size: 2rem;
         word-wrap: break-word;
         text-align: center;
-        line-height: 2rem;
         color: ${colors.gray};
         font-weight: 300;
         transform: scale(.7) translateY(-50%);

@@ -1,5 +1,6 @@
 import React from 'react';
-import Arrow from '../Arrow';
+import Arrow from '../../Arrow';
+import styles from './styles';
 
 const KnowMoreButton = ({direction,content}) => {
     return ( 
@@ -8,6 +9,7 @@ const KnowMoreButton = ({direction,content}) => {
                 {content}
             </div>
             <Arrow direction={direction}/>
+            <style jsx>{styles}</style>
         </button>
     )
 }

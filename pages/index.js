@@ -5,7 +5,7 @@ import Hero from '../components/sections/Hero';
 import SocialMedia from '../components/SocialMedia';
 import AboutMe from '../components/sections/AboutMe';
 import Portfolio from '../components/sections/Portfolio';
-
+import MoveButton from '../components/buttons/MoveButton';
 
 export default function Home() {
   return (

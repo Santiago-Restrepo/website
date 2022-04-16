@@ -11,29 +11,30 @@ const Numbers = () => {
     ? useLayoutEffect
     : useEffect
     useIsomorphicLayoutEffect(() => {
-            let atScroll = false;
-            let parallaxText = document.querySelectorAll(".numbers p");
+            // var atScroll = false;
+            // let parallaxText = document.querySelectorAll(".numbers p");
 
-            const scrollProgress = () => {
-                atScroll = true;
-            };
+            // const scrollProgress = () => {
+            //     atScroll = true;
+            // };
 
-            const raf = () => {
-                if (atScroll) {
-                    parallaxText.forEach((element, index) => {
-                        if (index === 1) {
-                            element.style.transform = "translateY(" + window.scrollY / 500 + "%)";
-                        }else{
-                            element.style.transform = `translateY(-${(window.scrollY / 500) + 10}%) scale(.7)`;
-                        }
-                    });
-                    atScroll = false;
-                }
-                requestAnimationFrame(raf);
-            };
+            // const raf = () => {
+            //     if (atScroll) {
+            //         parallaxText.forEach((element, index) => {
+            //             if (index === 1) {
+            //                 element.style.transform = "translateY(" + window.scrollY / 500 + "%)";
+            //             }else{
+            //                 element.style.transform = `translateY(-${(window.scrollY / 500) + 10}%) scale(.7)`;
+            //             }
+            //         });
+            //         atScroll = false;
+            //     }
+                
+            //     requestAnimationFrame(raf);
+            // };
 
-            requestAnimationFrame(raf);
-            window.addEventListener("scroll", scrollProgress);
+            // requestAnimationFrame(raf);
+            // window.addEventListener("scroll", scrollProgress);
     }, [])
     
     return ( 

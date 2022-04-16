@@ -16,7 +16,7 @@ export const globalStyles = css.global`
         background-image: url(${bg.src});
     }
     body{
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
     }
     button{
         width: 100%;

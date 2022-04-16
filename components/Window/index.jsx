@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './styles';
-const Window = ({children}) => {
+const Window = ({children, classes, tabText}) => {
     return ( 
-        <div className='window'>
+        <div className={`window ${classes}`}>
             <div className="window__tab">
-                <span>Santi@restrepo: ~</span>
+                <span>{tabText}</span>
                 <div className="window__tab-buttons">
                     <div className="tabButton"></div>
                     <div className="tabButton"></div>

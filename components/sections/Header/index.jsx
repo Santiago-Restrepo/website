@@ -4,7 +4,7 @@ import styles from './styles';
 // import logo from '../../../assets/SRI.png'
 const Header = () => {
     return ( 
-        <header>
+        <header id='header'>
             <span>SRI</span>
             {/* <Image
                 src={logo}

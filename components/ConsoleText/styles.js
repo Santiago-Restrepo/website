@@ -3,6 +3,7 @@ import { colors } from '../../styles/theme'
 
 export default css`
     .consoleText{
+        padding: 0 1rem;
         color: ${colors.white};
     }
     .consoleText__prompt{

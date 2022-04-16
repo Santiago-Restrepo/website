@@ -5,7 +5,7 @@ export default css`
     .socialMedia{
         z-index: 1;
         position: fixed;
-        top: 1.5rem;
+        top: 1rem;
         right: 1rem;
         display: flex;
         flex-direction: column;
@@ -36,7 +36,7 @@ export default css`
         width: 100%;
         margin: 0;
         padding: 0  0 .5rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         background: none;
         border: 1px solid transparent;
         cursor: pointer;
