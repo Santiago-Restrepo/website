@@ -22,10 +22,10 @@ export default css`
         bottom: -2rem;
         left: -1rem;
         color: ${colors.white};
-        opacity: .5;
+        opacity: .8;
     }
     .cvLink:hover{
-        opacity: .8;
+        opacity: .5;
     }
 
     @media screen and (min-width: 768px){

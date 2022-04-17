@@ -16,10 +16,12 @@ export default css`
     }
 
     header span{
-        border: 2px solid ${colors.white};
+        background: linear-gradient(to right, ${colors.primary}, ${colors.secondary});
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         border-radius: .5rem;
         padding: .3rem 1.5rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 500;
     }
 `

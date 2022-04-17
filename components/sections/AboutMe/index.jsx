@@ -11,7 +11,6 @@ const AboutMe = () => {
             <div className="aboutMe__container">
                 <div className="aboutMe__image">
                     <Image src={mePhoto} style={{
-                        position: "relative",
                         borderRadius: "1rem",
                         zIndex: 1,
                     }}/>

@@ -5,7 +5,7 @@ import styles from './styles';
 const Header = () => {
     return ( 
         <header id='header'>
-            <span>SRI</span>
+            <span>{"<SRI/>"}</span>
             {/* <Image
                 src={logo}
                 alt="Picture of the author"
