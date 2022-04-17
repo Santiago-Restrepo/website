@@ -19,6 +19,7 @@ export default css`
         display: flex;
         flex-direction: column;
         border-radius: .3rem;
+        
     }
     .socialMedia a, .showButton{
         color: white;
@@ -34,12 +35,11 @@ export default css`
         display: flex;
         justify-content: center;
         width: 100%;
-        margin: 0;
+        margin: 0 0 1rem 0;
         padding: 0  0 .5rem;
         font-size: 2rem;
         background: none;
         border: 1px solid transparent;
-        cursor: pointer;
     }
     .closeButton{
         /* color: red; */

@@ -24,12 +24,12 @@ export default css`
         white-space: nowrap;
     }
     .portfolio__title h2:nth-child(1){
-        right: -30%;
+        right: -100%;
         top:0;
         color: ${colors.primary};
     }
     .portfolio__title h2:nth-child(2){
-        left: -30%;
+        left: -100%;
         bottom:0;
     }
 

@@ -42,8 +42,8 @@ const Portfolio = () => {
     return ( 
         <section className='portfolio'>
             <div className="portfolio__title">
-                <h2 className="portfolio__title-projects">Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos  | Proyectos | Proyectos | Proyectos</h2>
-                <h2 className="portfolio__title-selected">seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados</h2>
+                <h2 className="portfolio__title-projects">Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos | Proyectos  | Proyectos | Proyectos | Proyectos</h2>
+                <h2 className="portfolio__title-selected">seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados  | seleccionados</h2>
             </div>
             <div className="portfolio__container">
                 <DialogProject/>

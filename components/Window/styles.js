@@ -6,8 +6,10 @@ export default css`
         display: flex;
         flex-direction: column;
         margin: 1rem 1.5rem 1rem;
-        padding: 0 1.5rem;
-        max-width: 45rem;
+        padding: 0 1.5rem 1rem;
+        max-width: 50rem;
+        height: fit-content;
+        width: 100%;
         margin: 0 auto;
         color: ${colors.white};
         border-radius: .5rem;
@@ -112,6 +114,17 @@ export default css`
         .window.desktopSize{
             transform: perspective(300px) rotateY(10deg) rotateX(0deg);
             max-height: 25rem;
+        }
+    }
+    @media screen and (min-width: 1444px){
+        .window.mobileSize{
+            transform: perspective(300px) rotateY(-10deg) rotateX(0deg);
+            max-width: 10rem;
+            height: 100%;
+        }
+        .window.desktopSize{
+            max-width: 50rem;
+            height: 90%;
         }
     }
 `

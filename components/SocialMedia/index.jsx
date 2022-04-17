@@ -1,5 +1,5 @@
 import {TiSocialInstagram, TiContacts} from 'react-icons/ti'
-import {FaWhatsapp, FaFacebookF} from 'react-icons/fa'
+import {FaWhatsapp, FaFacebookF, FaGithub} from 'react-icons/fa'
 import {BsTwitter} from 'react-icons/bs'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import styles from './styles';
@@ -23,19 +23,20 @@ const SocialMedia = () => {
     
     useIsomorphicLayoutEffect(()=>{
         let fadeInLeft = gsap.to(".socialMedia__container", {
-            duration: .5, 
+            duration: .7, 
             x: 0, 
+            background: `linear-gradient(${colors.primary}, ${colors.secondary})`, 
             paused: true,
-            background: `linear-gradient(${colors.primary}, ${colors.secondary})`
         });
         let rotate360 = gsap.to(".showButton", {
-            duration: .5, 
+            duration: .7, 
             rotateY: 360,
             paused: true,
         });
+
         gsap.to(".socialMedia__container", {
             duration: 0, 
-            x: 100, 
+            x: 100,
         });
         setAnimations({
             socialIcons: fadeInLeft,
@@ -79,6 +80,9 @@ const SocialMedia = () => {
                 </a>
                 <a href="" className="socialMedia__button">
                     <BsTwitter/>
+                </a>   
+                <a href="" className="socialMedia__button">
+                    <FaGithub/>
                 </a>   
             </div>
             <style jsx>{styles}</style>

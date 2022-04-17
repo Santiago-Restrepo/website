@@ -2,9 +2,9 @@ import React from 'react';
 import Arrow from '../../Arrow';
 import styles from './styles';
 
-const KnowMoreButton = ({direction,content, classes}) => {
+const KnowMoreButton = ({direction,content, classes, handleClick}) => {
     return ( 
-        <button className={`knowMoreButton ${classes}`}>
+        <button className={`knowMoreButton ${classes}`} onClick={handleClick}>
             <div className="knowMoreButton__content">
                 {content}
             </div>

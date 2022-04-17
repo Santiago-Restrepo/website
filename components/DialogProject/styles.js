@@ -22,7 +22,8 @@ export default css`
     }
     .currentProject__image{
         object-fit: cover;
-        background-position: center;
+        background-position: top;
+        background-size: cover;
         width: 100%;
         height: 100%;
         border-radius: 0 0 .5rem .5rem;
@@ -31,7 +32,7 @@ export default css`
         position: relative;
         margin: 1.5rem;
         padding: 1.5rem;
-        background-color: #19191ab0;
+        background-color: #252525e1;
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px);
         border-radius: 1rem;
@@ -66,11 +67,20 @@ export default css`
         .currentProject{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            max-width: 55rem;
+            max-width: 40rem;
             
         }
         .currentProject__images{
-            width: 120%
+            width: 120%;
+        }
+        .currentProject__content{
+            width: 100%;
         }
     }
+    @media screen and (min-width: 1444px){
+        .currentProject{
+            max-width: 55rem;   
+        }
+    }
+
 `
