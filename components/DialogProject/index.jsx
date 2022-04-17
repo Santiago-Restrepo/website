@@ -57,7 +57,7 @@ const DialogProject = () => {
                 <h2 className='currentProject__title'>{currentProject.name}</h2>
                 <p className='currentProject__description'>{currentProject.description}</p>
                 <div className="currentProject__buttons">
-                    <a href={currentProject.link} target="_blank" rel='nopeer' className='seeMoreButton'>Ver proyecto</a>
+                    <a href={currentProject.link} target="_blank" rel="noreferrer" className='seeMoreButton'>Ver proyecto</a>
                     <KnowMoreButton direction="right" content="Siguiente proyecto" classes="floating" handleClick={()=>{
                         const currentIndexProject = projects.indexOf(currentProject);
                         const projectImages = document.querySelectorAll('.currentProject__image');
