@@ -6,7 +6,7 @@ import ofiartesImage from '../../assets/ofiartes.png'
 import demotosImage from '../../assets/demotos.png'
 import { useLayoutEffect , useEffect} from 'react';
 import styles from './styles';
-
+import gsap from 'gsap';
 const projects = [
     {
         name: "Greazy",
@@ -61,18 +61,39 @@ const DialogProject = () => {
                     <KnowMoreButton direction="right" content="Siguiente proyecto" classes="floating" handleClick={()=>{
                         const currentIndexProject = projects.indexOf(currentProject);
                         const projectImages = document.querySelectorAll('.currentProject__image');
-                        if (currentIndexProject !== projects.length -1) {  
-                            setCurrentProject(projects[currentIndexProject + 1])
-                            projectImages[0].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
-                            projectImages[1].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
-                        } else {
-                            setCurrentProject(projects[0])
-                            projectImages[0].style.backgroundImage = `url(${projects[0].image.src})`;
-                            projectImages[1].style.backgroundImage = `url(${projects[0].image.src})`;
-                        } 
-                            
+                        let tl = gsap.timeline({
+                            defaults: {
+                                duration: 1.0,
+                                ease: "expo.inOut"
+                            }
+                        });
+                        let tl2 = gsap.timeline({
+                            defaults: {
+                                duration: 1.0,
+                                ease: "expo.inOut"
+                            }
+                        });
+                        let tl3 = gsap.timeline({
+                            defaults: {
+                                duration: 1.0,
+                                ease: "expo.inOut"
+                            }
+                        });
+                        tl.to(".desktopSize .currentProject__image", { width: 0 }).to(".desktopSize .currentProject__image", { width: "100%" });
+                        tl2.to(".mobileSize .currentProject__image", { transform: "translateX(105%)" }).to(".mobileSize .currentProject__image", { transform: "translateX(0)" });
+                        tl3.to([".currentProject__title",".currentProject__description"], { opacity: 0 }).to([".currentProject__title",".currentProject__description"], { opacity: 1 });
+                        // tl3.to(".seeMoreButton", { transform: "rotateX(45deg);" }).to(".mobileSize .currentProject__image", { transform: "rotateX(0deg)" });
                         setTimeout(()=>{
-                        }, 100)
+                            if (currentIndexProject !== projects.length -1) {  
+                                setCurrentProject(projects[currentIndexProject + 1])
+                                projectImages[0].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
+                                projectImages[1].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
+                            } else {
+                                setCurrentProject(projects[0])
+                                projectImages[0].style.backgroundImage = `url(${projects[0].image.src})`;
+                                projectImages[1].style.backgroundImage = `url(${projects[0].image.src})`;
+                            } 
+                        }, 1000)
                     }}/>
                 </div>
             </div>

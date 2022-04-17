@@ -8,10 +8,12 @@ export default css`
         margin-top: 3rem;
     }
     .aboutMe__container{
-        position: relative;
-        max-width: 45rem;
+        max-width: 30rem;
         margin: 0 auto;
         
+    }
+    .aboutMe__image{
+        position: relative;
     }
     .cvLink{
         z-index: 1;
@@ -19,13 +21,18 @@ export default css`
         position: absolute;
         bottom: -2rem;
         left: -1rem;
-        color: ${colors.white}
+        color: ${colors.white};
+        opacity: .5;
+    }
+    .cvLink:hover{
+        opacity: .8;
     }
 
     @media screen and (min-width: 768px){
         .aboutMe__container{
             display: flex;
             align-items: center;
+            max-width: 45rem;
         }
     }
 `

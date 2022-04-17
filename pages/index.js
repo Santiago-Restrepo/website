@@ -22,7 +22,6 @@ export default function Home() {
           <Hero/>
           <AboutMe/>
           <Portfolio/>
-      
       </Layout>
     </>
   )

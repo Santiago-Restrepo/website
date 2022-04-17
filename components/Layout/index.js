@@ -1,5 +1,6 @@
 import Header from "../sections/Header";
 import styles from "./styles";
+import cursor from '../../assets/cursor.png'
 const Layout = ({children}) => {
     return (
         <main>

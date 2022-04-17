@@ -12,6 +12,7 @@ return (
     <Main />
     <NextScript />
     </body>
+    
 </Html>
 )
 }

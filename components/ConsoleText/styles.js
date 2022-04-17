@@ -51,6 +51,9 @@ export default css`
         typing1ch 1s steps(1, end),
         blink-caret .75s step-end infinite;
     }
+    .aboutMeConsoleText{
+        max-width: 15rem;
+    }
     /* The typing effect */
     @keyframes typing6ch {
         from { width: 0 }

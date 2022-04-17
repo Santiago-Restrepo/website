@@ -27,6 +27,8 @@ export default css`
         width: 100%;
         height: 100%;
         border-radius: 0 0 .5rem .5rem;
+        box-shadow: 1px 1px 3px #000000 inset;
+        transform-origin: top;
     }
     .currentProject__content{
         position: relative;
@@ -97,6 +99,31 @@ export default css`
         }
         .currentProject__content{
             width: 100%;
+        }
+        .currentProject__title{
+            position: relative;
+        }
+        .currentProject__title{
+            padding: 0 .5rem;
+        }
+        .currentProject__title::before{
+            z-index: -1;
+            position: absolute;
+            top:0;
+            right: 0;
+            left:0;
+            bottom: 0;
+            content: '';
+            background-color: ${colors.white};
+            border-radius: 1rem;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+    @media screen and (min-width: 1248px){
+        .currentProject{
+            max-width: 50rem;   
         }
     }
     @media screen and (min-width: 1444px){

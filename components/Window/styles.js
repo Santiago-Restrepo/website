@@ -19,7 +19,8 @@ export default css`
         position: absolute;
         background-size: cover;
         padding: 0;
-        border: 2px inset ${colors.gray}44;
+        border: 2.5px inset ${colors.gray}44;
+        overflow: hidden;
         
     }
     .window.desktopSize .window__tab, .window.mobileSize .window__tab{
@@ -82,10 +83,9 @@ export default css`
     }
 
     .window__tab-buttons .tabButton{
-        width: .7rem;
-        height: .7rem;
+        width: .6rem;
+        height: .6rem;
         border-radius: 100%;
-        opacity: .9;
     }
     .tabButton:nth-child(1){
         background-color: ${colors.green};
@@ -107,6 +107,7 @@ export default css`
     }
     .window.desktopSize .window__content, .window.mobileSize .window__content{
         border: 5px solid ${colors.black};
+        background-color: ${colors.black};
     }
 
     @media screen and (min-width: 1024px){

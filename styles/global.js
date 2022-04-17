@@ -1,6 +1,8 @@
 import css from 'styled-jsx/css'
 import { colors } from './theme'
 import bg from '../assets/bg.png'
+
+
 export const globalStyles = css.global`
     * {
         font-family: "Rajdhani", sans-serif;
