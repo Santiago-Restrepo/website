@@ -19,8 +19,7 @@ export default css`
         position: absolute;
         background-size: cover;
         padding: 0;
-
-        /* border: 2px inset ${colors.gray}33; */
+        border: 2px inset ${colors.gray}44;
         
     }
     .window.desktopSize .window__tab, .window.mobileSize .window__tab{
@@ -101,10 +100,13 @@ export default css`
     .window__content{
         height: 100%;
         border-radius: 0 0 .5rem .5rem;
-        background-color: #35353579;
+        background-color: ${colors.background};
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px); 
         font-size: 1.2rem;
+    }
+    .window.desktopSize .window__content, .window.mobileSize .window__content{
+        border: 5px solid ${colors.black};
     }
 
     @media screen and (min-width: 1024px){

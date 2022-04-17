@@ -11,7 +11,7 @@ export default css`
         position: relative;
         height: 5.5rem;
         overflow-x: hidden;
-        background-color: #19191ab0;
+        background-color: ${colors.background};
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px); 
     }

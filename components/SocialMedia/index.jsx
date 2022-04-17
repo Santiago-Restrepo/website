@@ -23,13 +23,13 @@ const SocialMedia = () => {
     
     useIsomorphicLayoutEffect(()=>{
         let fadeInLeft = gsap.to(".socialMedia__container", {
-            duration: .7, 
+            duration: .5, 
             x: 0, 
             background: `linear-gradient(${colors.primary}, ${colors.secondary})`, 
             paused: true,
         });
         let rotate360 = gsap.to(".showButton", {
-            duration: .7, 
+            duration: .5, 
             rotateY: 360,
             paused: true,
         });
@@ -69,19 +69,19 @@ const SocialMedia = () => {
             </button>
             <div className="socialMedia__container">
 
-                <a href="" className="socialMedia__button">
+                <a href="https://www.facebook.com/santiago.restrepo.374/" className="socialMedia__button">
                     <FaFacebookF/>
                 </a>
-                <a href="" className="socialMedia__button">
+                <a href="https://www.instagram.com/algundiasanti/" className="socialMedia__button">
                     <TiSocialInstagram/>
                 </a>
-                <a href="" className="socialMedia__button">
+                <a href="https://api.whatsapp.com/send?phone=573104052315&text=%E2%9C%8C%F0%9F%8F%BC" className="socialMedia__button">
                     <FaWhatsapp/>
                 </a>
-                <a href="" className="socialMedia__button">
+                <a href="https://twitter.com/algundiasanti" className="socialMedia__button">
                     <BsTwitter/>
                 </a>   
-                <a href="" className="socialMedia__button">
+                <a href="https://github.com/Santiago-Restrepo" className="socialMedia__button">
                     <FaGithub/>
                 </a>   
             </div>

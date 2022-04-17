@@ -9,7 +9,7 @@ export default css`
         max-width: 20rem;
         max-height: 30rem;
         margin: -1rem auto 0;
-        background-color: #35353579;
+        background-color: ${colors.background};
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px);
         border-radius: 1rem;

@@ -2,32 +2,35 @@ import React, {useState} from 'react';
 import KnowMoreButton from '../buttons/KnowMoreButton'
 import Window from '../Window';
 import greazyImage from '../../assets/greazy.png'
+import ofiartesImage from '../../assets/ofiartes.png'
+import demotosImage from '../../assets/demotos.png'
 import { useLayoutEffect , useEffect} from 'react';
 import styles from './styles';
 
 const projects = [
     {
         name: "Greazy",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!",
-        link: "https://127.0.0.1:8080",
+        description: "Landing page / eCommerce para la marca de ropa Greazy desarrollada con WebPack, HTML5, CSS3 y JavaScript. Tecnologías nativas para un excelente rendimiento, buen posicionamiento SEO y una intuitiva experiencia de usuario",
+        link: "https://www.greazy.shop/",
         image: greazyImage
     },
     {
         name: "Ofiartes",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!",
-        link: "https://127.0.0.1:8080",
-        image: ""
+        description: "Aplicación web desarrollada con Webpack, ReactJS, Sass y el CMS Contentful con el objetivo de ofrecer información y apoyo a la Corporación Ofiartes y todos sus beneficiarios",
+        link: "https://ofiartes.vercel.app/",
+        image: ofiartesImage
     },
     {
         name: "DeMotos",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quas!",
-        link: "https://127.0.0.1:8080",
-        image: ""
+        description: "Página web para la agendación de citas y consulta de servicios del taller Demotos Medellín utilizando Webpack, pug, Sass y Javascript",
+        link: "https://demotosmedellin.com/",
+        image: demotosImage
     }
 ]
 
 const DialogProject = () => {
-    const [ currentProject, setCurrentProject ] = useState(projects[0]);const isHopefullyDomEnvironment =
+    const [ currentProject, setCurrentProject ] = useState(projects[0]);
+    const isHopefullyDomEnvironment =
     typeof window !== 'undefined' &&
     typeof window.document !== 'undefined' &&
     typeof window.document.createElement !== 'undefined'
@@ -44,11 +47,9 @@ const DialogProject = () => {
         <div className='currentProject'>
             <div className="currentProject__images">
                 <Window classes="desktopSize">
-                    {/* <Image src={currentProject.image}/> */}
                     <div className="currentProject__image"></div>
                 </Window>
                 <Window classes="mobileSize">
-                    {/* <Image src={currentProject.image}/> */}
                     <div className="currentProject__image"></div>
                 </Window>
             </div>
@@ -56,8 +57,23 @@ const DialogProject = () => {
                 <h2 className='currentProject__title'>{currentProject.name}</h2>
                 <p className='currentProject__description'>{currentProject.description}</p>
                 <div className="currentProject__buttons">
-                    <button className='seeMoreButton'>Ver proyecto</button>
-                    <KnowMoreButton direction="right" content="Siguiente proyecto" classes="floating"/>
+                    <a href={currentProject.link} target="_blank" rel='nopeer' className='seeMoreButton'>Ver proyecto</a>
+                    <KnowMoreButton direction="right" content="Siguiente proyecto" classes="floating" handleClick={()=>{
+                        const currentIndexProject = projects.indexOf(currentProject);
+                        const projectImages = document.querySelectorAll('.currentProject__image');
+                        if (currentIndexProject !== projects.length -1) {  
+                            setCurrentProject(projects[currentIndexProject + 1])
+                            projectImages[0].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
+                            projectImages[1].style.backgroundImage = `url(${projects[currentIndexProject + 1].image.src})`;
+                        } else {
+                            setCurrentProject(projects[0])
+                            projectImages[0].style.backgroundImage = `url(${projects[0].image.src})`;
+                            projectImages[1].style.backgroundImage = `url(${projects[0].image.src})`;
+                        } 
+                            
+                        setTimeout(()=>{
+                        }, 100)
+                    }}/>
                 </div>
             </div>
             <style jsx>{styles}</style>

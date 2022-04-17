@@ -32,7 +32,7 @@ export default css`
         position: relative;
         margin: 1.5rem;
         padding: 1.5rem;
-        background-color: #252525e1;
+        background-color: ${colors.background};
         -webkit-backdrop-filter: saturate(180%) blur(2px);
         backdrop-filter: saturate(180%) blur(2px);
         border-radius: 1rem;
@@ -45,7 +45,6 @@ export default css`
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
     .seeMoreButton{
         position: absolute;
         bottom: -1rem;
@@ -53,12 +52,35 @@ export default css`
         width: fit-content;
         padding: .4rem 1rem;
         font-size: 1rem;
-        font-weight: 500;
-        background-color: ${colors.primary}22;
+        font-weight: 600;
+        background: ${colors.white};
         border-radius: .3rem;
-        border: 2px solid ${colors.primary};
-        color: ${colors.primary};
+        border: 2px solid ${colors.secondary};
+        color: ${colors.secondary};
     }
+    
+    .seeMoreButton:hover{
+        background: ${colors.secondary};
+        color: ${colors.white};
+
+    }
+    /* .seeMoreButton::before{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: ${colors.white};
+        border-radius: .3rem;
+    } */
+    /* .seeMoreButton:hover::before{
+        transform: scale(.8);
+    } */
+
     .currentProject__content .knowMoreButton{
         bottom: -1rem;
     }
